@@ -3,11 +3,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Globe Viewer</title>
-  <script src="bundle.js"></script>
+  <script src="vendor.js"></script>
+  <script src="app.js"></script>
+  <script>require('initialize');</script>
   <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="app.css">
   <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
-  <meta property="og:image" content="http://visualperspective.github.io/globe-viewer/img/thumb.jpg">
+  <meta property="og:image" content="http://k9.github.io/globe-viewer/img/thumb.jpg">
 </head>
 <body>
   <div class="loading">
@@ -21,10 +23,10 @@
       <div class="header-row">
         <h1>Globe Viewer</h1>
         <div class="info">
-          <a href="https://github.com/VisualPerspective/globe-viewer">
+          <a href="https://github.com/k9/globe-viewer">
             <img alt="Source code" src="img/github.svg">
           </a>
-          <a href="http://www.visualperspective.io">
+          <a href="http://www.kwjames.com">
             <img alt="About" src="img/info-circle.svg">
           </a>
         </div>
@@ -47,14 +49,9 @@
         </div>
       </div>
       <render-modes></render-modes>
-      <projections></projections>
       <div>
         <div class="sub-group">
           <div class="checkbox-options">
-            <checkbox-option
-              label="Borders"
-              property="countries">
-            </checkbox-option>
             <checkbox-option
               label="Rivers"
               property="rivers">
