@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+<title>WebWorker Projection Test</title>
+<link rel="stylesheet" href="styles.css">
+<script src="vendor.js"></script>
+<script src="app.js"></script>
+<script>require('initialize.js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<div>
+<div class="left">
+  <h1>WebWorker Projection Test</h1>
+  <p>
+    <a href="https://github.com/VisualPerspective/web-worker-projection">
+      <img alt="Source code" src="img/github.svg"> Code and explanation
+    </a>
+    <a href="http://www.visualperspective.io">
+      <img alt="About" src="img/info-circle.svg"> About us
+    </a>
+  </p>
+  <p>A test of whether running D3 geo projections in a
+  WebWorker is practical and helpful for performance.</p>
+  <form id="runBenchmark">
+    <fieldset id="fields">
+      <fieldset>
+        <legend>Detail</legend>
+        <label>
+          <input type="radio" name="detail" value="low">
+          Low
+        </label>
+        <label>
+          <input type="radio" name="detail" value="medium" checked>
+          Medium
+        </label>
+        <label>
+          <input type="radio" name="detail" value="high">
+          High
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Method</legend>
+        <label>
+          <input type="radio" name="method" value="svg" checked>
+          SVG
+        </label>
+        <label>
+          <input type="radio" name="method" value="canvas">
+          Canvas
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Workers</legend>
+        <label>
+          <input type="radio" name="workers" value="0">
+          None
+        </label>
+        <label>
+          <input type="radio" name="workers" value="1" checked>
+          One
+        </label>
+        <label>
+          <input type="radio" name="workers" value="2">
+          Two
+        </label>
+     </fieldset>
+      <fieldset>
+        <button id="go">Run Test</button>
+      </fieldset>
+    </fieldset>
+  </form>
+</div>
+<div class="right">
+</div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Detail</th>
+      <th>Method</th>
+      <th>Workers</th>
+      <th class="number">FPS</th>
+      <th class="number">Render Time*</th>
+    </tr>
+  </thead>
+  <tbody id="results">
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="5">
+        * The percentage of time the main thread spends handling requestAnimationFrame
+      </td>
+    </tr>
+  </tfoot>
+</table>
+</body>

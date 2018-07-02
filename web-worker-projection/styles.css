@@ -1,0 +1,93 @@
+body {
+  font-family: helvetica, arial, sans-serif;
+  max-width: 60rem;
+  margin: 1rem auto;
+}
+
+@media (max-width: 63rem) {
+  body { padding: 0 1.5rem; }
+}
+
+@media (min-width: 45rem) {
+  .left {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+  }
+
+  .right {
+    display: inline-block;
+    width: 49%;
+  }
+}
+
+h1 { margin-bottom: 0; }
+
+a img {
+  height: 1.25rem;
+  vertical-align: bottom;
+}
+
+a, a:active, a:visited {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  margin-top: 0.5rem;
+  color: #444;
+  font-weight: bold;
+  padding-right: 1rem;
+}
+
+form { margin-bottom: 2rem; }
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset>fieldset {
+  margin: 1.5rem 0 0 0;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 0 0.5rem 0;
+}
+
+label { padding: 0 1rem 0 0; }
+input { margin: 0; vertical-align: 1px; }
+
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+
+th {
+  width: 20%;
+  border-bottom: 1px solid #000;
+}
+
+td, th {
+  text-align: left;
+  padding: 4px 16px 2px 0;
+}
+
+td:last-child, th:last-child { padding-right: 4px }
+
+tfoot td {
+  font-size: 14px;
+  padding-top: 20px;
+  color: #666;
+}
+
+.number { text-align: right; }
+
+canvas, svg {
+  display: block;
+  width: 100%;
+}
+
+.countries { fill: #eee; stroke: #78a; stroke-width: 0.5px; }
+.rivers { fill: none; stroke: #78a; stroke-width: 0.5px }
+.lakes { fill: #78a; }
+.globe { fill: #78a; }
